@@ -1,6 +1,8 @@
+const Books = require("../../models/Books")
+
 const GetAllBooks = async(request, response) => {
     try {
-        const books = ["psikologi", "sport", "design", "teknologi"]
+        const books = await Books.find()
         response.json({
             status: response.statusCode,
             api_version: "v1",

@@ -15,7 +15,7 @@ const CreateBooks = async(request, response) => {
             status: response.statusCode,
             api_version: "v1",
             message: "Success Create Books",
-            data: bookCreated,
+            data: books,
             timestamp: new Date().toUTCString(),
         })
     } catch (error) {
